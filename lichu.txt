@@ -1,0 +1,24 @@
+Args in experiment:
+Namespace(random_seed=2021, is_training=1, model_id='ETTh1_336_96', model='Time_Unet', data='ETTh1', root_path='./dataset/ETT', data_path='ETTh1.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', seq_len=336, label_len=48, pred_len=96, stage_num=3, stage_pool_kernel=3, stage_pool_stride=2, stage_pool_padding=0, fc_dropout=0.05, head_dropout=0.0, patch_len=16, stride=8, padding_patch='end', revin=1, affine=0, subtract_last=0, decomposition=0, kernel_size=25, individual=1, embed_type=0, enc_in=7, dec_in=7, c_out=7, d_model=512, n_heads=8, e_layers=2, d_layers=1, d_ff=2048, moving_avg=25, factor=1, distil=True, dropout=0.05, embed='timeF', activation='gelu', output_attention=False, do_predict=False, corr_lower_limit=0.6, num_workers=10, itr=1, train_epochs=3, batch_size=256, patience=10, learning_rate=0.01, des='Exp', loss='mse', lradj='type3', pct_start=0.3, use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', test_flop=False)
+Use GPU: cuda:0
+3 2 1
+3 1 0
+>>>>>>>start training : ETTh1_336_96_Time_Unet_ETTh1_ftM_sl336_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 8209
+val 2785
+test 2785
+Epoch: 1 cost time: 72.52817392349243
+Epoch: 1, Steps: 32 | Train Loss: 0.5977485 Vali Loss: 0.9202172 Test Loss: 0.5104657
+Validation loss decreased (inf --> 0.920217).  Saving model ...
+Updating learning rate to 0.01
+Epoch: 2 cost time: 72.06384325027466
+Epoch: 2, Steps: 32 | Train Loss: 0.5140912 Vali Loss: 0.8917829 Test Loss: 0.4805636
+Validation loss decreased (0.920217 --> 0.891783).  Saving model ...
+Updating learning rate to 0.01
+Epoch: 3 cost time: 70.37582087516785
+Epoch: 3, Steps: 32 | Train Loss: 0.3746867 Vali Loss: 0.7585508 Test Loss: 0.4054778
+Validation loss decreased (0.891783 --> 0.758551).  Saving model ...
+Updating learning rate to 0.01
+>>>>>>>testing : ETTh1_336_96_Time_Unet_ETTh1_ftM_sl336_ll48_pl96_dm512_nh8_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2785
+mse:0.40547776222229004, mae:0.4307445287704468, rse:0.6063704490661621
